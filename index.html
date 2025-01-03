@@ -19,15 +19,15 @@
 
     <div class="app-space">
     <header>
-        <form class="search-form">
-            <input type="search" placeholder="Enter city name..." required class="search-input">
+        <form class="search-form" id="search-form">
+            <input type="search" placeholder="Enter city name..." required class="search-input" id="searchInput">
             <input type="submit" value="Search" class="search-button">
         </form>
     </header>
     <main>
         <div class="weather-app-data">
             <div>
-                <h1 class="weather-app-city">Tübingen</h1>
+                <h1 class="weather-app-city" id="cityName">Tübingen</h1>
                 <p class="weather-app-details">
             Thursday 15:41, overcast clouds
             <br>
@@ -42,7 +42,7 @@
         </div>
         </div>
     </main>
-    <h1>Welcome to Shanna's Weather App</h1>
+    <br>
     <footer>Coded by
         <a href="https://github.com/CodeShanna" target="_blank">Shanna.</a> Code hosted on <a
             href="https://github.com/CodeShanna/weatherapp" target="_blank">GitHub</a> and website hosted on <a
@@ -50,6 +50,6 @@
     </footer>
     </div>
 </body>
-<script>
+<script src="src/index.js">
 </script>
 </html>
