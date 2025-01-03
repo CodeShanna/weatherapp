@@ -15,6 +15,7 @@ function updateTemperature(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%,`;
   speedElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
+}
 
 function formatDate(date) {
   let minutes = date.getMinutes();
@@ -29,7 +30,11 @@ function formatDate(date) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day}, ${hours}:${minutes}'
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day}, ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
@@ -48,5 +53,3 @@ let searchformElement = document.querySelector("#search-form");
 searchformElement.addEventListener("submit", updateCity);
 
 searchCity("Tübingen");
-
-//Details for the humidity
