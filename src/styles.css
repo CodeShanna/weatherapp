@@ -1,0 +1,12 @@
+body    {
+    background-color: #015668;
+    font-family: Ubuntu;
+}
+
+.app-space {
+    background-color: #fff1cf;
+    max-width: 600px;
+    margin: 45px auto;
+    padding: 30px;
+    border-radius: 20px;
+}
