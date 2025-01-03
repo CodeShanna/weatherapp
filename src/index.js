@@ -7,6 +7,7 @@ function updateTemperature(response) {
   let speedElement = document.querySelector("#speed");
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
   //Moved this from the updateCity function so that the city spelling and format would be the result of the API call.
@@ -15,6 +16,7 @@ function updateTemperature(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%,`;
   speedElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 }
 
 function formatDate(date) {
